@@ -1,0 +1,55 @@
+COMPLEXITY ANALYSIS
+
+1. Hash Function
+   h(key) = key % 10
+   Time: O(1)
+
+2. Insertion with Linear Probing
+   - Best/Average case: approximately O(1) when the load factor is low.
+   - Worst case: O(n), because many occupied slots may need to be probed.
+   - Space: O(m), where m is the hash-table size.
+
+3. Hash Search with Linear Probing
+   - Best case: O(1)
+   - Average case: expected O(1) under good distribution and a reasonable load factor.
+   - Worst case: O(n), because collisions can produce long probe sequences.
+
+4. Linear Search
+   - Best case: O(1)
+   - Average case: O(n)
+   - Worst case: O(n)
+   - Extra space: O(1)
+
+5. Load Factor
+   Number of stored records n = 8
+   Hash table size m = 10
+   Load factor alpha = n/m = 8/10 = 0.80
+
+   A load factor of 0.80 means 80% of the table is occupied. With linear probing,
+   a high load factor increases clustering and probe lengths.
+
+6. Observed Results
+   Hashing operations for the eight successful searches:
+   1, 1, 2, 2, 3, 3, 4, 4
+   Total = 20
+   Average = 2.50
+
+   Linear-search comparisons:
+   1, 2, 3, 4, 5, 6, 7, 8
+   Total = 36
+   Average = 4.50
+
+7. Interpretation
+   Hashing required 20 observed search operations compared with 36 comparisons
+   for linear search. Therefore, for this input, hashing reduced the average
+   number of search operations despite the collisions.
+
+   The important limitation is that this result is affected by the chosen hash
+   function, table size, collision strategy, and load factor. The given IDs
+   produce only two initial hash indices (0 and 5), so the division method is
+   poorly distributed for this particular data set.
+
+8. Suitability
+   Hashing is suitable for a music application when fast lookup by song ID is
+   required. However, the table size and hash function should be selected to
+   distribute IDs more evenly, and the load factor should be controlled.

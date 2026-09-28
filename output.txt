@@ -1,0 +1,135 @@
+MUSIC APPLICATION - HASHING ASSIGNMENT
+Division Method with Linear Probing
+Table Size = 10
+
+========== INSERTION ==========
+
+Inserting 105 -> Hash Index = 5
+Collisions = 0
+Hash Table:
+Index 0 : EMPTY
+Index 1 : EMPTY
+Index 2 : EMPTY
+Index 3 : EMPTY
+Index 4 : EMPTY
+Index 5 : 105
+Index 6 : EMPTY
+Index 7 : EMPTY
+Index 8 : EMPTY
+Index 9 : EMPTY
+
+Inserting 210 -> Hash Index = 0
+Collisions = 0
+Hash Table:
+Index 0 : 210
+Index 1 : EMPTY
+Index 2 : EMPTY
+Index 3 : EMPTY
+Index 4 : EMPTY
+Index 5 : 105
+Index 6 : EMPTY
+Index 7 : EMPTY
+Index 8 : EMPTY
+Index 9 : EMPTY
+
+Inserting 315 -> Hash Index = 5
+Collisions = 1
+Hash Table:
+Index 0 : 210
+Index 1 : EMPTY
+Index 2 : EMPTY
+Index 3 : EMPTY
+Index 4 : EMPTY
+Index 5 : 105
+Index 6 : 315
+Index 7 : EMPTY
+Index 8 : EMPTY
+Index 9 : EMPTY
+
+Inserting 420 -> Hash Index = 0
+Collisions = 1
+Hash Table:
+Index 0 : 210
+Index 1 : 420
+Index 2 : EMPTY
+Index 3 : EMPTY
+Index 4 : EMPTY
+Index 5 : 105
+Index 6 : 315
+Index 7 : EMPTY
+Index 8 : EMPTY
+Index 9 : EMPTY
+
+Inserting 525 -> Hash Index = 5
+Collisions = 2
+Hash Table:
+Index 0 : 210
+Index 1 : 420
+Index 2 : EMPTY
+Index 3 : EMPTY
+Index 4 : EMPTY
+Index 5 : 105
+Index 6 : 315
+Index 7 : 525
+Index 8 : EMPTY
+Index 9 : EMPTY
+
+Inserting 630 -> Hash Index = 0
+Collisions = 2
+Hash Table:
+Index 0 : 210
+Index 1 : 420
+Index 2 : 630
+Index 3 : EMPTY
+Index 4 : EMPTY
+Index 5 : 105
+Index 6 : 315
+Index 7 : 525
+Index 8 : EMPTY
+Index 9 : EMPTY
+
+Inserting 735 -> Hash Index = 5
+Collisions = 3
+Hash Table:
+Index 0 : 210
+Index 1 : 420
+Index 2 : 630
+Index 3 : EMPTY
+Index 4 : EMPTY
+Index 5 : 105
+Index 6 : 315
+Index 7 : 525
+Index 8 : 735
+Index 9 : EMPTY
+
+Inserting 840 -> Hash Index = 0
+Collisions = 3
+Hash Table:
+Index 0 : 210
+Index 1 : 420
+Index 2 : 630
+Index 3 : 840
+Index 4 : EMPTY
+Index 5 : 105
+Index 6 : 315
+Index 7 : 525
+Index 8 : 735
+Index 9 : EMPTY
+
+========== SEARCH COMPARISON ==========
+ID      Hash Result     Hash Operations  Linear Comparisons
+105     Index 5         1                 1
+210     Index 0         1                 2
+315     Index 6         2                 3
+420     Index 1         2                 4
+525     Index 7         3                 5
+630     Index 2         3                 6
+735     Index 8         4                 7
+840     Index 3         4                 8
+
+Total Hash Operations = 20
+Average Hash Operations = 2.50
+Total Linear Comparisons = 36
+Average Linear Comparisons = 4.50
+
+Load Factor = 8 / 10 = 0.80

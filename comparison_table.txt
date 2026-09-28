@@ -1,0 +1,27 @@
+COMPARISON TABLE
+
+| Criterion | Hashing (Division + Linear Probing) | Linear Search |
+|-----------|--------------------------------------|---------------|
+| Search method | Hash index + probing | Sequential checking |
+| Total operations for given searches | 20 | 36 |
+| Average operations/comparisons | 2.50 | 4.50 |
+| Best-case time | O(1) | O(1) |
+| Average-case time | Expected O(1) | O(n) |
+| Worst-case time | O(n) | O(n) |
+| Extra space | O(m) | O(1) |
+| Effect of collisions | Increases probe count | Not applicable |
+| Result for this input | Faster observed lookup | More comparisons |
+
+FINAL CONCLUSION
+
+The Division Method hash table with linear probing provides faster observed
+search performance than linear search for the given eight song IDs. The
+average observed hashing cost is 2.50 operations, while linear search requires
+4.50 comparisons.
+
+However, the input values cause many collisions because the IDs produce only
+two initial hash positions, 0 and 5. The load factor is 0.80, which also
+increases probing and clustering. Therefore, hashing is suitable for the
+music application because it can provide near-constant-time lookup, but the
+hash table should use an appropriate table size and a hash function that gives
+a better distribution of song IDs.
